@@ -1,11 +1,12 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
-import { NativeScriptModule } from "nativescript-angular/platform";
+import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { NativeScriptHttpModule } from "nativescript-angular/http";
+import { Store, StoreModule } from '@ngrx/store';
 
 import { AppComponent } from "./app.component";
-import { routes, navigatableComponents } from "./app.routing";
+import { counter } from "./reducers/counter";
 
 @NgModule({
     bootstrap: [
@@ -15,12 +16,10 @@ import { routes, navigatableComponents } from "./app.routing";
         NativeScriptModule,
         NativeScriptFormsModule,
         NativeScriptHttpModule,
-        NativeScriptRouterModule,
-        NativeScriptRouterModule.forRoot(routes)
+        StoreModule.provideStore({ counter })
     ],
     declarations: [
-        AppComponent,
-        ...navigatableComponents
+        AppComponent
     ],
     providers: [],
     schemas: [

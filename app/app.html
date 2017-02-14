@@ -1,0 +1,14 @@
+<ActionBar title="Contador con ngrx/store"></ActionBar>
+<GridLayout rows="*, auto, *">
+
+    <GridLayout row="0" class="text-center">
+        <Label id="counter" text="{{ counter$ | async }}"></Label>
+    </GridLayout>
+
+    <GridLayout row="1" columns="*, *, *">
+        <Button text="Increase" class="btn btn-primary" col="0" (tap)="inc()"></Button>
+        <Button text="Reset" class="btn btn-primary" col="1" (tap)="reset()"></Button>
+        <Button text="Decrease" class="btn btn-primary" col="2" (tap)="dec()"></Button>
+    </GridLayout>
+
+</GridLayout>

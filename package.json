@@ -4,7 +4,7 @@
   "readme": "NativeScript Application",
   "repository": "<fill-your-repository-here>",
   "nativescript": {
-    "id": "org.nativescript.tnscounter",
+    "id": "org.nativescript.ngrxstorecounter",
     "tns-ios": {
       "version": "2.5.0"
     }
@@ -18,6 +18,8 @@
     "@angular/platform-browser": "2.4.3",
     "@angular/platform-browser-dynamic": "2.4.3",
     "@angular/router": "3.4.3",
+    "@ngrx/core": "^1.2.0",
+    "@ngrx/store": "^2.2.1",
     "nativescript-angular": "1.4.0",
     "nativescript-theme-core": "~1.0.2",
     "reflect-metadata": "~0.1.8",
